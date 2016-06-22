@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.left = None
         self.right = None
+        self.parent = None  # for 4.6
 
     def __str__(self):
         return str(self.data)

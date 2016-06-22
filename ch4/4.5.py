@@ -17,18 +17,32 @@ def isBST(bt):
         return isBST(bt.left)
     return isBST(bt.left) and isBST(bt.right)
 
+def isBST2(bt):
+    return isBST2_a(bt, -99999, 99999)
+
+def isBST2_a(bt, min, max):
+    if bt is None:
+        return True
+    if bt.data <= min or bt.data > max:
+        return False
+    if not isBST2_a(bt.left, min, bt.data) or not isBST2_a(bt.right, bt.data, max):
+        return False
+    return True
+
 bt = Tree.Node(1)
 bt.left = Tree.Node(0)
-bt.right = Tree.Node(2)
+bt.right = Tree.Node(20)
 Tree.levelorderTraversal(bt)
 print()
 print(isBST(bt))
+print(isBST2(bt))
 
 bt2 = Tree.Node(10)
 bt2.left = bt
 Tree.levelorderTraversal(bt2)
 print()
-print(isBST(bt2))
+print(isBST(bt2))   # wrong
+print(isBST2(bt2))
 
 bt2 = Tree.Node(10)
 bt2.left = bt
@@ -36,3 +50,4 @@ bt2.right = Tree.Node(9)
 Tree.levelorderTraversal(bt2)
 print()
 print(isBST(bt2))
+print(isBST2(bt2))
