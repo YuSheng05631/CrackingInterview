@@ -1,0 +1,16 @@
+"""
+You have 20 bottles of pills.
+19 bottles have 1.0 gram pills, but one has pills of weight 1.1 grams.
+Given a scale that provides an exact measurement, how would you find the heavy bottle?
+You can only use the scale once.
+"""
+"""
+Ans.
+1. 將所有瓶子貼上1到20的編號。
+2. 從編號1的瓶子裡取1顆藥丸到磅秤上，從編號2的瓶子裡取2顆藥丸到磅秤上，以此類推。
+3. 假設秤到的重量為h，是1.1 grams的瓶子編號為x，可得到公式：
+    h = x * 1.1 + (1 + 2 + 3 + ... + 20) * 1.0 - x * 1.0
+    h = x * 1.1 + 210 - x 
+    h = x * 0.1 + 210
+4. 假設秤到的重量為211.3 grams，代入以上公式即可得到答案為編號13。
+"""

@@ -1,0 +1,13 @@
+"""
+There is an 8x8 chess board in which two diagonally opposite corners have been cut off.
+You are given 31 dominos, and a single domino can cover exactly two squares.
+Can you use the 31 dominos to cover the entire board?
+Prove your answer (by providing an example or showing why it's impossible).
+"""
+"""
+Ans.
+不可能。
+若將棋盤塗成黑白相交，每次放一個骨牌都會有一格黑色和一格白色被覆蓋。
+而將對角兩格拿走，會有兩格相同的顏色不見(兩格黑色或兩格白色)。
+在剩下的30格黑色和32格白色(或相反)，當骨牌放到最後一個時必定會剩兩格白色，故無法達成條件。
+"""

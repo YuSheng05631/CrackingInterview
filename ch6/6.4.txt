@@ -1,0 +1,15 @@
+"""
+A bunch of people are living on an island, when a visitor comes with a strange order:
+all blue-eyed people must leave the island as soon as possible.
+There will be a flight out at 8:00pm every evening.
+Each person can see everyone else's eye color, but they do not know their own (nor is anyone allowed to tell them).
+Additionally, they do not know how many people have blue eyes, although they do know that at least one person does.
+How many days will it take the blue-eyed people to leave?
+"""
+"""
+Ans.
+設有藍眼睛的人數為c，且c>0。
+若c=1。有藍眼睛的那個人看到其他人都沒有藍眼睛，而他知道至少有一個人有藍眼睛，他就會知道是自己有藍眼睛，便在第1晚離開。
+若c=2。有藍眼睛的人看到其他1人有藍眼睛，他們兩個各自會認為c不是1就是2。若在第1晚沒有人離開，代表自己也有藍眼睛，便在第2晚離開。
+以此類推，因此他們離開的天數就等於c。
+"""
